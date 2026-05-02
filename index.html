@@ -1584,7 +1584,7 @@ function switchTab(btn, formId) {
 
 // ═══ GOOGLE SHEETS CRM ═══
 // ⬇️ ВСТАВЬ СЮДА URL СВОЕГО GOOGLE APPS SCRIPT (после деплоя) ⬇️
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbySWww0WyUSWmP54dLXjKGVoxalO_ht7KVCh3YcbS2HnOV5CYWis9qsabxYs49eoaZIMw/exec';
+const GOOGLE_SCRIPT_URL = 'YOUR_GOOGLE_SCRIPT_URL_HERE';
 
 async function submitForm(e, type) {
   e.preventDefault();
@@ -1619,7 +1619,7 @@ async function submitForm(e, type) {
   btn.style.opacity = '0.7';
   
   try {
-    if (GOOGLE_SCRIPT_URL === 'https://script.google.com/macros/s/AKfycbySWww0WyUSWmP54dLXjKGVoxalO_ht7KVCh3YcbS2HnOV5CYWis9qsabxYs49eoaZIMw/exec') {
+    if (GOOGLE_SCRIPT_URL === 'YOUR_GOOGLE_SCRIPT_URL_HERE') {
       // Demo mode — Google Script not connected yet
       await new Promise(r => setTimeout(r, 1000));
       console.log('📋 Form data (demo mode):', data);
