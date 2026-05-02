@@ -1326,27 +1326,27 @@ footer ul a:hover { color: var(--amber); }
           <div class="form-row">
             <div class="form-group">
               <label>Ім'я та прізвище</label>
-              <input type="text" placeholder="Олександр Петренко">
+              <input type="text" name="name" placeholder="Олександр Петренко" required>
             </div>
             <div class="form-group">
               <label>Компанія</label>
-              <input type="text" placeholder="ТОВ 'Назва'">
+              <input type="text" name="company" placeholder="ТОВ 'Назва'" required>
             </div>
           </div>
           <div class="form-row">
             <div class="form-group">
               <label>Email</label>
-              <input type="email" placeholder="email@company.ua">
+              <input type="email" name="email" placeholder="email@company.ua" required>
             </div>
             <div class="form-group">
               <label>Телефон</label>
-              <input type="tel" placeholder="+380 ...">
+              <input type="tel" name="phone" placeholder="+380 ...">
             </div>
           </div>
           <div class="form-group">
             <label>Галузь</label>
-            <select>
-              <option>Оберіть галузь</option>
+            <select name="industry">
+              <option value="">Оберіть галузь</option>
               <option>Будівництво</option>
               <option>Сільське господарство</option>
               <option>Виробництво</option>
@@ -1357,53 +1357,53 @@ footer ul a:hover { color: var(--amber); }
           <div class="form-row">
             <div class="form-group">
               <label>Кількість працівників</label>
-              <input type="number" placeholder="10">
+              <input type="number" name="workers" placeholder="10">
             </div>
             <div class="form-group">
               <label>Бажаний термін</label>
-              <input type="text" placeholder="1-2 місяці">
+              <input type="text" name="timeline" placeholder="1-2 місяці">
             </div>
           </div>
           <div class="form-group">
             <label>Додаткова інформація</label>
-            <textarea placeholder="Опишіть вимоги до працівників, умови роботи..."></textarea>
+            <textarea name="message" placeholder="Опишіть вимоги до працівників, умови роботи..."></textarea>
           </div>
-          <button class="form-submit" onclick="submitForm(event)">Надіслати заявку</button>
+          <button class="form-submit" onclick="submitForm(event, 'employer')">Надіслати заявку</button>
         </div>
         <div id="worker-uk" style="display:none">
           <div class="form-row">
             <div class="form-group">
               <label>Full Name</label>
-              <input type="text" placeholder="Your full name">
+              <input type="text" name="name" placeholder="Your full name" required>
             </div>
             <div class="form-group">
               <label>Країна</label>
-              <input type="text" placeholder="Bangladesh">
+              <input type="text" name="country" placeholder="Bangladesh" required>
             </div>
           </div>
           <div class="form-row">
             <div class="form-group">
               <label>Email</label>
-              <input type="email" placeholder="your@email.com">
+              <input type="email" name="email" placeholder="your@email.com" required>
             </div>
             <div class="form-group">
               <label>WhatsApp</label>
-              <input type="tel" placeholder="+880 ...">
+              <input type="tel" name="phone" placeholder="+880 ...">
             </div>
           </div>
           <div class="form-group">
             <label>Професія / спеціальність</label>
-            <input type="text" placeholder="Welder, Electrician, Driver...">
+            <input type="text" name="profession" placeholder="Welder, Electrician, Driver...">
           </div>
           <div class="form-group">
             <label>Досвід роботи (років)</label>
-            <input type="number" placeholder="5">
+            <input type="number" name="experience" placeholder="5">
           </div>
           <div class="form-group">
             <label>Повідомлення</label>
-            <textarea placeholder="Розкажіть про свій досвід та побажання..."></textarea>
+            <textarea name="message" placeholder="Розкажіть про свій досвід та побажання..."></textarea>
           </div>
-          <button class="form-submit" onclick="submitForm(event)">Подати заявку</button>
+          <button class="form-submit" onclick="submitForm(event, 'worker')">Подати заявку</button>
         </div>
       </div>
 
@@ -1417,27 +1417,27 @@ footer ul a:hover { color: var(--amber); }
           <div class="form-row">
             <div class="form-group">
               <label>Full Name</label>
-              <input type="text" placeholder="John Smith">
+              <input type="text" name="name" placeholder="John Smith" required>
             </div>
             <div class="form-group">
               <label>Company</label>
-              <input type="text" placeholder="Company LLC">
+              <input type="text" name="company" placeholder="Company LLC" required>
             </div>
           </div>
           <div class="form-row">
             <div class="form-group">
               <label>Email</label>
-              <input type="email" placeholder="email@company.com">
+              <input type="email" name="email" placeholder="email@company.com" required>
             </div>
             <div class="form-group">
               <label>Phone</label>
-              <input type="tel" placeholder="+380 ...">
+              <input type="tel" name="phone" placeholder="+380 ...">
             </div>
           </div>
           <div class="form-group">
             <label>Industry</label>
-            <select>
-              <option>Select industry</option>
+            <select name="industry">
+              <option value="">Select industry</option>
               <option>Construction</option>
               <option>Agriculture</option>
               <option>Manufacturing</option>
@@ -1448,53 +1448,53 @@ footer ul a:hover { color: var(--amber); }
           <div class="form-row">
             <div class="form-group">
               <label>Number of Workers</label>
-              <input type="number" placeholder="10">
+              <input type="number" name="workers" placeholder="10">
             </div>
             <div class="form-group">
               <label>Desired Timeline</label>
-              <input type="text" placeholder="1-2 months">
+              <input type="text" name="timeline" placeholder="1-2 months">
             </div>
           </div>
           <div class="form-group">
             <label>Additional Information</label>
-            <textarea placeholder="Describe your worker requirements, working conditions..."></textarea>
+            <textarea name="message" placeholder="Describe your worker requirements, working conditions..."></textarea>
           </div>
-          <button class="form-submit" onclick="submitForm(event)">Submit Request</button>
+          <button class="form-submit" onclick="submitForm(event, 'employer')">Submit Request</button>
         </div>
         <div id="worker-en" style="display:none">
           <div class="form-row">
             <div class="form-group">
               <label>Full Name</label>
-              <input type="text" placeholder="Your full name">
+              <input type="text" name="name" placeholder="Your full name" required>
             </div>
             <div class="form-group">
               <label>Country</label>
-              <input type="text" placeholder="Bangladesh">
+              <input type="text" name="country" placeholder="Bangladesh" required>
             </div>
           </div>
           <div class="form-row">
             <div class="form-group">
               <label>Email</label>
-              <input type="email" placeholder="your@email.com">
+              <input type="email" name="email" placeholder="your@email.com" required>
             </div>
             <div class="form-group">
               <label>WhatsApp</label>
-              <input type="tel" placeholder="+880 ...">
+              <input type="tel" name="phone" placeholder="+880 ...">
             </div>
           </div>
           <div class="form-group">
             <label>Profession / Specialization</label>
-            <input type="text" placeholder="Welder, Electrician, Driver...">
+            <input type="text" name="profession" placeholder="Welder, Electrician, Driver...">
           </div>
           <div class="form-group">
             <label>Years of Experience</label>
-            <input type="number" placeholder="5">
+            <input type="number" name="experience" placeholder="5">
           </div>
           <div class="form-group">
             <label>Message</label>
-            <textarea placeholder="Tell us about your experience and preferences..."></textarea>
+            <textarea name="message" placeholder="Tell us about your experience and preferences..."></textarea>
           </div>
-          <button class="form-submit" onclick="submitForm(event)">Apply Now</button>
+          <button class="form-submit" onclick="submitForm(event, 'worker')">Apply Now</button>
         </div>
       </div>
     </div>
@@ -1582,11 +1582,88 @@ function switchTab(btn, formId) {
   });
 }
 
-// Form submit placeholder
-function submitForm(e) {
+// ═══ GOOGLE SHEETS CRM ═══
+// ⬇️ ВСТАВЬ СЮДА URL СВОЕГО GOOGLE APPS SCRIPT (после деплоя) ⬇️
+const GOOGLE_SCRIPT_URL = 'YOUR_GOOGLE_SCRIPT_URL_HERE';
+
+async function submitForm(e, type) {
   e.preventDefault();
+  const btn = e.target;
+  const formContainer = btn.closest('[id]');
   const isUk = !document.body.classList.contains('lang-en');
-  alert(isUk ? 'Дякуємо! Ваша заявка прийнята. Ми зв\'яжемося з вами протягом 24 годин.' : 'Thank you! Your application has been received. We\'ll contact you within 24 hours.');
+  
+  // Collect all named fields from this form
+  const inputs = formContainer.querySelectorAll('input[name], select[name], textarea[name]');
+  const data = { type: type };
+  let hasRequired = true;
+  
+  inputs.forEach(input => {
+    data[input.name] = input.value.trim();
+    if (input.hasAttribute('required') && !input.value.trim()) {
+      input.style.borderColor = '#e74c3c';
+      hasRequired = false;
+    } else {
+      input.style.borderColor = '';
+    }
+  });
+  
+  if (!hasRequired) {
+    alert(isUk ? 'Будь ласка, заповніть обов\'язкові поля' : 'Please fill in all required fields');
+    return;
+  }
+  
+  // UI feedback
+  const originalText = btn.textContent;
+  btn.textContent = isUk ? 'Відправляємо...' : 'Sending...';
+  btn.disabled = true;
+  btn.style.opacity = '0.7';
+  
+  try {
+    if (GOOGLE_SCRIPT_URL === 'YOUR_GOOGLE_SCRIPT_URL_HERE') {
+      // Demo mode — Google Script not connected yet
+      await new Promise(r => setTimeout(r, 1000));
+      console.log('📋 Form data (demo mode):', data);
+      showSuccess(formContainer, isUk);
+    } else {
+      // Real submission to Google Sheets
+      await fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      showSuccess(formContainer, isUk);
+    }
+  } catch (err) {
+    console.error('Submit error:', err);
+    alert(isUk 
+      ? 'Помилка відправки. Спробуйте ще раз або зв\'яжіться через Telegram.' 
+      : 'Submission error. Please try again or contact us via Telegram.');
+  } finally {
+    btn.textContent = originalText;
+    btn.disabled = false;
+    btn.style.opacity = '1';
+  }
+}
+
+function showSuccess(container, isUk) {
+  // Clear form
+  container.querySelectorAll('input, textarea').forEach(i => i.value = '');
+  container.querySelectorAll('select').forEach(s => s.selectedIndex = 0);
+  
+  // Show success message
+  let msg = container.querySelector('.success-msg');
+  if (!msg) {
+    msg = document.createElement('div');
+    msg.className = 'success-msg';
+    msg.style.cssText = 'background:#22c55e15;border:1px solid #22c55e40;color:#166534;padding:16px 20px;border-radius:10px;margin-top:16px;font-weight:600;font-size:0.95rem;text-align:center;';
+    container.appendChild(msg);
+  }
+  msg.innerHTML = isUk 
+    ? '✅ Дякуємо! Вашу заявку прийнято.<br><span style="font-weight:400;font-size:0.85rem;color:#5a6274">Ми зв\'яжемося з вами протягом 24 годин.</span>'
+    : '✅ Thank you! Your application has been received.<br><span style="font-weight:400;font-size:0.85rem;color:#5a6274">We\'ll contact you within 24 hours.</span>';
+  msg.style.display = 'block';
+  setTimeout(() => { msg.style.display = 'none'; }, 8000);
 }
 
 // Header scroll effect
