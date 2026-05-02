@@ -1619,21 +1619,14 @@ async function submitForm(e, type) {
   btn.style.opacity = '0.7';
   
   try {
-    if (GOOGLE_SCRIPT_URL === 'YOUR_GOOGLE_SCRIPT_URL_HERE') {
-      // Demo mode — Google Script not connected yet
-      await new Promise(r => setTimeout(r, 1000));
-      console.log('📋 Form data (demo mode):', data);
-      showSuccess(formContainer, isUk);
-    } else {
       // Real submission to Google Sheets
-      await fetch(GOOGLE_SCRIPT_URL, {
+      const response = await fetch(GOOGLE_SCRIPT_URL, {
         method: 'POST',
         mode: 'no-cors',
-        headers: { 'Content-Type': 'application/json' },
+        redirect: 'follow',
         body: JSON.stringify(data)
       });
       showSuccess(formContainer, isUk);
-    }
   } catch (err) {
     console.error('Submit error:', err);
     alert(isUk 
